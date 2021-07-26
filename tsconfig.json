@@ -5,10 +5,17 @@
     "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
+    "baseUrl": ".",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"]
+    "lib": ["dom", "esnext"],
+    "types": ["vite/client"],
+    "typeRoots": ["./node_modules/@types/", "./types"],
+    "paths": {
+      "/@/*": ["src/*"],
+      "/#/*": ["types/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
