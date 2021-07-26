@@ -1,7 +1,7 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  111
+  <button class="btn btn-primary">DaisyUI Button</button>
 </template>
 
 <script lang="ts">
