@@ -1,27 +1,103 @@
-# Vue 3 + Typescript + Vite
+<div align="center">
+  <h1>vue3_boilerplate</h1>
+  <a href="https://github.com/zodea/vue3_boilerplate">
+  <img alt="GitHub" src="https://img.shields.io/github/license/zodea/vue3_boilerplate?style=flat-square">
+  </a>
+</div>
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+## 简介
 
-## Recommended IDE Setup
+vue3_boilerplate 是基于 vite vue-ts 模版搭建的项目，使用了 vue3,vite2,TypeScript 等主流技术开发。
 
-[VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
+## 特性
 
-### If Using `<script setup>`
+- **Vue3**: 最前沿前端开发框架
+- **Vite2**： 下一代前端开发与构建工具
+- **TypeScript**: 应用程序级 JavaScript 的语言
+- **WindiCSS**: 下一代实用优先的 CSS 框架
+  - **daisyui**: Tailwind CSS Components
+- PostCSS 8 + postcss-pxtorem: 自适应不同分辨率
+- EsLint
+- Prettier
+- Alias @ to <project_root>/src
+- Using new script setup syntax (see [Vue rfc #227](https://github.com/vuejs/rfcs/pull/227))
 
-[`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
+## Git 贡献提交规范
 
-## Type Support For `.vue` Imports in TS
+- 参考 [vue](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md) 规范 ([Angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular))
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can use the following:
+  - `feat` 增加新功能
+  - `fix` 修复问题/BUG
+  - `style` 代码风格相关无影响运行结果的
+  - `perf` 优化/性能提升
+  - `refactor` 重构
+  - `revert` 撤销修改
+  - `test` 测试相关
+  - `docs` 文档/注释
+  - `chore` 依赖更新/脚手架配置修改等
+  - `workflow` 工作流改进
+  - `ci` 持续集成
+  - `types` 类型定义文件更改
+  - `wip` 开发中
 
-### If Using Volar
+- 现结合 commitizen 使用，使用 git cz 规范化提交代码
 
-Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
+首先安装 commitizen 工具
 
-### If Using Vetur
+```bash
+npm install commitizen -g
+```
 
-1. Install and add `@vuedx/typescript-plugin-vue` to the [plugins section](https://www.typescriptlang.org/tsconfig#plugins) in `tsconfig.json`
-2. Delete `src/shims-vue.d.ts` as it is no longer needed to provide module info to Typescript
-3. Open `src/main.ts` in VSCode
-4. Open the VSCode command palette
-5. Search and run "Select TypeScript version" -> "Use workspace version"
+接下来，初始化你的项目以使用 cz-conventional-changelog 适配器，方法是键入:
+
+```bash
+commitizen init cz-conventional-changelog --save-dev --save-exact
+```
+
+如果你正在使用 Yarn:
+
+```bash
+commitizen init cz-conventional-changelog --yarn --dev --exact
+```
+
+## 安装使用
+
+- 获取项目代码
+
+```bash
+git clone https://github.com/zodea/vue3_boilerplate.git
+```
+
+- 安装依赖
+
+```bash
+cd vue3_boilerplate
+
+yarn install
+```
+
+- 运行 Ò
+
+```bash
+yarn dev
+```
+
+- 打包
+
+```bash
+yarn build
+```
+
+## 浏览器支持
+
+本地开发推荐使用`Chrome 80+` 浏览器
+
+支持现代浏览器, 不支持 IE
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt=" Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt=" Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                                             not support                                                                                              |                                                                                            last 2 versions                                                                                             |                                                                                                  last 2 versions                                                                                                  |                                                                                                last 2 versions                                                                                                |                                                                                                last 2 versions                                                                                                |
+
+## License
+
+[MIT © zodea-2021](./LICENSE)
